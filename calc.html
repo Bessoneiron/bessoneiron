@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Поле ввода</title>
+  <link rel="stylesheet" href="style.css"
+ </head>
+  <body>
+ <header>
+    <h1>Заработная плата</h1></header>
+ <ul class="nav">
+            <li><a href="index.html"">Главная</a></li>
+            <li><a href="pic.html">Среднемесячная заработная плата в России</a></li>
+            <li><a href="canv.html">Среднемесячная заработная плата по отраслям</a></li>
+            <li><a href="calc.html">Калькулятор</a></li></ul>
+ <h2>Калькулятор расчета заработной платы</h2>
+ <form onsubmit="return false" oninput="amount.value = (oklad.valueAsNumber * (1+coeff.valueAsNumber/100))* (1-nalog.valueAsNumber/100)">
+ <legend>Расчет зарплаты</legend>
+ <p class="spec"><label for="oklad">Оклад, руб. </label>
+  <input type="number" min="0" id="oklad" ></p>
+ <p class="spec"><label for="coeff">Районный коэффициент, % </label>
+  <input type="number" min="0" id="coeff"</p>
+ <p class="spec"><label for="nalog"> Подоходный налог, % </label>
+  <input type="number" min="0" id="nalog"></p>
+ <p class="spec1">Начисленная заработная плата (руб.): <strong><output name="amount" for="oklad coeff nalog">0</output></strong></p>
+ </body>
+</html>
+
+
